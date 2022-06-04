@@ -18,12 +18,10 @@ function onClickWrapper(e) {
 
 function onCreateBoxes(e, amount) {
   const boxesArray = [];
-  let sizeDivEl = 20;
+  let sizeDivEl = 30;
 
   for (let i = 0; i < amount; i += 1) {
     const divEl = document.createElement('div');
-  
-    sizeDivEl += 10;
 
     divEl.style.width = `${sizeDivEl}px`;
     divEl.style.height = `${sizeDivEl}px`;
@@ -31,6 +29,8 @@ function onCreateBoxes(e, amount) {
     divEl.style.backgroundColor = getRandomHexColor();
 
     boxesArray.push(divEl);
+
+    sizeDivEl += 10;
   }
 
   refs.boxes.append(...boxesArray);
